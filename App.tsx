@@ -1,10 +1,10 @@
+import { Loading } from '@components/Loading';
 import {
   Roboto_400Regular,
   Roboto_700Bold,
   useFonts,
 } from '@expo-google-fonts/roboto';
 import { Groups } from '@screens/Groups';
-import { Loading } from '@screens/Loading';
 import theme from '@theme/index';
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
