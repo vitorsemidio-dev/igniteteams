@@ -4,9 +4,9 @@ import {
   useFonts,
 } from '@expo-google-fonts/roboto';
 import { Groups } from '@screens/Groups';
+import { Loading } from '@screens/Loading';
 import theme from '@theme/index';
 import { StatusBar } from 'expo-status-bar';
-import { ActivityIndicator } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        {fontsLoaded ? <Groups /> : <ActivityIndicator />}
+        {fontsLoaded ? <Groups /> : <Loading />}
       </ThemeProvider>
     </>
   );
