@@ -6,7 +6,7 @@ import {
 import { Groups } from '@screens/Groups';
 import { Loading } from '@screens/Loading';
 import theme from '@theme/index';
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 export default function App() {
@@ -18,7 +18,11 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <StatusBar style="auto" />
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
         {fontsLoaded ? <Groups /> : <Loading />}
       </ThemeProvider>
     </>
